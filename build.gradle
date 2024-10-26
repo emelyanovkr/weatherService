@@ -13,6 +13,10 @@ java {
     }
 }
 
+bootJar {
+    destinationDirectory = file("target")
+}
+
 repositories {
     mavenCentral()
 }
@@ -29,3 +33,4 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+

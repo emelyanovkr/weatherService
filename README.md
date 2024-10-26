@@ -14,8 +14,9 @@
 2. Create .env file and specify environment variables to use:
    - WIREMOCK_BASE_URL (for example: http://wiremock:8080, please specify wiremock as domain name)
    - WIREMOCK_FORECAST_API (for example: /api/forecast?days=)
-3. Use gradle command to create bootJar with all dependencies:
-   ```.\gradlew bootJar```
+3. If you would like to rebuild app, use gradle command to create bootJar with all dependencies:
+   ```.\gradlew bootJar```  
+   *for unix systems use backslash and please make gradlew executable: chmod 755 gradlew*
 4. Use docker compose command to start both services:
    ```docker-compose up -d --build```
    - -d - to launch service in detached state
