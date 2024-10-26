@@ -24,6 +24,6 @@
 5. Once everything started, please import Postman Collection `WeatherService.json` 
    to communicate with service (there are specified requests for you to test).
 
-If you would like to edit mappings of mock server, please refer to /wiremock/mappings folder.
-If you would like to edit responses, please refer to /wiremock/__files folder.
+If you would like to edit mappings of mock server, please refer to /wiremock/mappings folder.  
+If you would like to edit responses, please refer to /wiremock/__files folder.  
 For more info: https://wiremock.org/docs/stubbing/
