@@ -8,13 +8,12 @@ public enum WeatherMessageAlert {
 
   private final String message;
 
-  WeatherMessageAlert(String message)
-  {
+  WeatherMessageAlert(String message) {
     this.message = message;
   }
 
-  public String getMessage()
-  {
+  @Override
+  public String toString() {
     return message;
   }
 }

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/forecast?days=5"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "weather-normal-response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/forecast?days=9"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "weather-cold-anomaly-response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

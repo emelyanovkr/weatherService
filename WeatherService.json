@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "0282e8f2-962f-4308-87cd-0b1511e160d4",
+		"name": "WeatherSerivce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26689131"
+	},
+	"item": [
+		{
+			"name": "Test Forecast Api",
+			"item": [
+				{
+					"name": "Hello Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/hello",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"hello"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Normal Temperature",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/forecast?days=5",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cold Temperature",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/forecast?days=7",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cold Anomaly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/forecast?days=9",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Heat Anomaly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/forecast?days=11",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MainService",
+			"item": [
+				{
+					"name": "No days specified",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/weather/info",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Normal temperatures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/weather/info?days=5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"info"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cold temperatures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/weather/info?days=7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"info"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cold anomaly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/weather/info?days=9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"info"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Heat anomaly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/weather/info?days=11",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"info"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Too big day parameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/weather/info?days=600",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"info"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "600"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data not found",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/weather/info?days=31",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"weather",
+								"info"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "31"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

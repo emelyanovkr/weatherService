@@ -1,15 +1,25 @@
 version: "3"
 services:
-  postgres-db:
-    image: postgres:17.0
-    environment:
-      POSTGRES_DB: ${POSTGRES_DB}
-      POSTGRES_USER: ${DATABASE_USER}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+  wiremock:
+    image: wiremock/wiremock:latest
     ports:
-      - "5432:5432"
+      - "8000:8080"
     volumes:
-      - psql-data:/var/lib/postgresql/data
+      - ./wiremock/mappings:/home/wiremock/mappings
+      - ./wiremock/__files:/home/wiremock/__files
+    command: [ "--verbose" ]
 
-volumes:
-  psql-data:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      WIREMOCK_BASE_URL: ${WIREMOCK_BASE_URL}
+      WIREMOCK_FORECAST_API: ${WIREMOCK_FORECAST_API}
+    depends_on:
+      - wiremock
+
+
+
+
+

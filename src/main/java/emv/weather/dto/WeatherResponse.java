@@ -1,10 +1,14 @@
 package emv.weather.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class WeatherResponse {
   private int days;
+
+  @JsonProperty("forecast")
   private List<WeatherEntryDTO> weatherInfo;
 
   @JsonInclude(JsonInclude.Include.NON_NULL)
